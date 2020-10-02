@@ -27,9 +27,9 @@ Este problema no es nuevo. A diferencia de nuestro sistema "naive" en la figura 
 
 Para entender cómo funcionan los sistemas de control de version es bueno introducir un poco de la jerga. Un **repository** (comúnmente denominados "repo") es un conjunto de archivos y su historial desde su creación, mientras que  **working copy** corresponde a una versión particular del repositorio. Las fotografías tomadas en un momento determinadas se conocen como **commits**.  Asi, los repositorios nacen cuando el usuario hace el primer commit de su proyecto. En la mayoría de los sitemas de control de version estos commits se hacen de forma manual (se privilegia el control sobre los cambios)
 
-Con las definiciones anteriores en mano, podemos subdividir los sistemas de control de versión se diferencian por tres aspectos:
+Con las definiciones anteriores en mano, podemos subdividir los sistemas de control de versión por tres aspectos:
 
-1. *Locales*: mantienen la información de todos los cambios de manera loca (i.e. en el computador del usuario). El problema de este tipo de sistemas es que no permiten la colaboración.
+1. *Locales*: mantienen la información de todos los cambios de manera local (i.e. en el computador del usuario). El problema de este tipo de sistemas es que no permiten la colaboración.
 
 2. *No distribuidos*: mantienen el repositorio en un servidor y le entregan una copia de trabajo a cada usario. Para que otros usuarios vean mi avance, yo tengo que hacer un *commit* y ellos tienen que hacer un **update** de la copia de trabajo que están usando. La principal ventaja de los sistemas no distribuidos es que permiten la colaboración y que el tráfico de datos es menor. No obstante, el riesgo de perderlo todo depende de qué tan seguro sea el servidor central.
    
