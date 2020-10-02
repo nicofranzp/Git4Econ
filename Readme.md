@@ -2,7 +2,9 @@
 
 La idea de este repositorio es documentar los beneficios del uso de *Git* en ciencias sociales y, en particular, en el campo de la Economía. La documentación estará diseñada para que personas sin experiencia previa entiendan las ventajas de este sistema de control de versión y tengan una idea de cómo incorporarlo en su estructura de trabajo. Los ejemplos se orinetarán hacia la producción de un paper académico, pero debería ser fácil para el usuario entender los alcances para el desarrollo de cualquier aplicación que utilice archivos de texto como insumo.
 
-Disclaimer: este es un documento en desarrollo. Sientete con la confianza de colaborar: usamos Git, asi que cualquier cambio que le hagas puede ser incorporado de forma segura. Además, ninguno de los colaboradores se considera un experto en sistemas de control de versión. Somos todos usuarios, algunos con más experiencia que otros.
+Disclaimer: este es un documento en desarrollo. Sientete con la confianza de colaborar, pro ejemplo editando este documento y generando un *pull request*. También puedes dejar tus preguntas y comentarios en un [*Issue*](https://github.com/nicofranzp/Git4Econ/issues/new) en GitHub. 
+
+Por último, ninguno de los colaboradores se considera un experto en sistemas de control de versión. Somos todos usuarios, algunos con más experiencia que otros. 
 
 ## Introducción
 
@@ -47,7 +49,7 @@ En conclusión, un sistema de control de versión es un secretario que mantiene 
 
 Como se mencionó anteriormente, Git es un sistema distribuido de control de versión. Uno de los más utilizados en el mundo. Fue creado en 2005 por [Linus Torvards](https://en.wikipedia.org/wiki/Linus_Torvalds) para el desarrollo del sistema operativo Linux. Lo que esencialmente hace, es registrar los cambios de una versión a otra y presenta al usuario la suma de todos esos cambios: algo asi como la integral de la derivada. La principal ventaja de este sistema es que esta optimizado para ser rápido y eficiente en el uso de espacio, además de disminuir la probabilidad de una perdida catastrofica.  
 
-Git es un software que se instala en el computador de los usuarios y pude ser utilizado de forma local (i.e. no es necesario un servidor). Una vez instalado, el usuario puede acceder a las utilidades del software a través de la linea de comando (terminal). Algunos sistemas operativos  o aplicaciones (como Anaconda de Python)  instalan Git por defecto, por lo que puede que ya tengas Git en tu sistema. Para verificar esto escribe `git --version` en el terminal. Si está instalado deberías tener un mensage y no un error:
+Git es un software que se instala en el computador de los usuarios y pude ser utilizado de forma local (i.e. no es necesario un servidor). Una vez instalado, el usuario puede acceder a las utilidades del software a través de la linea de comando (Terminal in macOS o Command Prompt o PowerShell en Windows). Algunos sistemas operativos  o aplicaciones (como Anaconda de Python)  instalan Git por defecto, por lo que puede que ya tengas Git en tu sistema. Para verificar esto escribe `git --version` en el Terminal. Si está instalado deberías tener un mensage y no un error:
 
 ``` git
 $ git --version
@@ -62,7 +64,7 @@ $ git config --global user.name "Tu Nombre o NickName"
 
 Es [este link](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config) se pueden encontrar mas opciones para configurar Git.
 
-Para explicar como incluir Git en el dia a dia proponemos un ejemplo. Supongamos que tenemos una carpeta en el escritorio llamada "project" y que dentro de ella se encuentran (o encontraran) todos los archivos relevantes para nuestro proyecto. Para inicializar Git en esta carpeta,  solo debemos abrirla en el terminal (o navegar hasta ella) y escribir `git init`. Este comando crea una carpeta oculta dentro de `project` llamada `.git`,  en donde se guaradará toda la información concerniente al control de versión. Hay otros archivos que nos pueden ayudar a modificar el comportamiento del programa, como por ejemplo`.gitignore`, en donde literalmente escribimos que tipo de archivos queremos que Git ignore (por ejemplo archivos auxiliares de la compilación de latex, bases de datos, archivos binarios, etc). 
+Para explicar como incluir Git en el dia a dia proponemos un ejemplo. Supongamos que tenemos una carpeta en el escritorio llamada "project" y que dentro de ella se encuentran (o encontraran) todos los archivos relevantes para nuestro proyecto. Para inicializar Git en esta carpeta,  solo debemos abrirla en el Terminal (o navegar hasta ella) y escribir `git init`. Este comando crea una carpeta oculta dentro de `project` llamada `.git`,  en donde se guaradará toda la información concerniente al control de versión. Hay otros archivos que nos pueden ayudar a modificar el comportamiento del programa, como por ejemplo`.gitignore`, en donde literalmente escribimos que tipo de archivos queremos que Git ignore (por ejemplo archivos auxiliares de la compilación de latex, bases de datos, archivos binarios, etc). 
 
 <p>
 <details> <summary>Ejemplo </summary>
@@ -88,7 +90,7 @@ En este ejemplo todo el contenido del directorio relativo  `ignoreThisFolder` se
 </details>
 </p>
 
-Una vez que se tienen cambios que se quieren registrar, lo primero que se tiene que hacer es pasar estos archivos al *staging area*, una especie de escenario en donde se presentan los cambios que queremos registrar en un *commit* en particular (notese que es probable que no todos los cambios se quieran registrar al mismo tiempo). Para efectos del ejemplo, supongamos que tenemos nuestro archivo `.gitignore` y el archivo de texto `readme.md` listos, pero que sólo queremos incorporar en el *commit* inicial al primero. Para ello escribimos en el terminal `git add .gitignore` (en caso de que se quieran incluir todos los archivos se puede tipear `git add -A`). Para revisar el estado del repositorio se escribe `git status`. En nuestro ejemplo, el status después de haber incorporado a `.gitignore` en el escenario es el sigente
+Una vez que se tienen cambios que se quieren registrar, lo primero que se tiene que hacer es pasar estos archivos al *staging area*, una especie de escenario en donde se presentan los cambios que queremos registrar en un *commit* en particular (notese que es probable que no todos los cambios se quieran registrar al mismo tiempo). Para efectos del ejemplo, supongamos que tenemos nuestro archivo `.gitignore` y el archivo de texto `readme.md` listos, pero que sólo queremos incorporar en el *commit* inicial al primero. Para ello escribimos en el Terminal `git add .gitignore` (en caso de que se quieran incluir todos los archivos se puede tipear `git add -A`). Para revisar el estado del repositorio se escribe `git status`. En nuestro ejemplo, el status después de haber incorporado a `.gitignore` en el escenario es el sigente
 
 ```git
 $ git status        
@@ -125,7 +127,13 @@ El resultado de escribir `git commit -m "Primer Commit"` es un registro llamado 
 Para una descripción mas detallada de cómo utilizar Git en el *command line* recomendamos revisar  el siguiente [link](https://git-scm.com/book/en/v2) 
 ### Trabajando colaborativamente con el "yo" del futuro y pasado
 
-Como vimos en la sección anterior,  lo único que se necesita para empezar a utilizar Git, es Git y un computador con sistema operativo Linux, Windows o MacOS. Esto nos permite empezar a llevar un control de todas las versiones de nuestro proyecto. 
+Como vimos en la sección anterior,  lo único que se necesita para empezar a utilizar Git, es Git y un computador con sistema operativo Linux, Windows o MacOS. Esto nos permite empezar a llevar un control de todas las versiones de nuestro proyecto. En esta sección presentamos algunas de las herraminetas (y terminología) que permite hacer esto de forma eficiente.
+
+Algunas de la recomendaciones son:
+1. **Hacer *commits* frecuentemente y darles un nombre con sentido**: la idea es evitar la vieja práctica de nombrar las versiones como "version final", "version final final", y comprometerse a informar al "yo"  del futuro (o potenciales colaboradores) cuáles son los principales objetivos de este *commit*.  Por ejemplo, 
+2. Usar ramas para probar nuevos  
+
+
 
 - [ ]  Mencionar que es el branching y trabajo no lineal
 - [ ]  Mencionar que Git no es mágico!! Igualmente requiere un orden y manejo de conflictos 
