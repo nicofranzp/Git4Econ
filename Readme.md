@@ -2,9 +2,9 @@
 
 La idea de este repositorio es documentar los beneficios del uso de *Git* en ciencias sociales y, en particular, en el campo de la Economía. La documentación estará diseñada para que personas sin experiencia previa entiendan las ventajas de este sistema de control de versión y tengan una idea de cómo incorporarlo en su estructura de trabajo. Los ejemplos se orinetarán hacia la producción de un paper académico, pero debería ser fácil para el usuario entender los alcances para el desarrollo de cualquier aplicación que utilice archivos de texto como insumo.
 
-Disclaimer: este es un documento en desarrollo. Sientete con la confianza de colaborar, pro ejemplo editando este documento y generando un *pull request*. También puedes dejar tus preguntas y comentarios en un [*Issue*](https://github.com/nicofranzp/Git4Econ/issues/new) en GitHub. 
+Disclaimer: este es un documento en desarrollo. Sientete con la confianza de colaborar, por ejemplo editando este documento (para esto tienes que importarlo a tu cuenta mediante *fork*, editarlo, y enviárlo de vuelta mediante un *pull request*). También puedes dejar tus preguntas y comentarios en un [*Issue*](https://github.com/nicofranzp/Git4Econ/issues/new) en GitHub. 
 
-Por último, ninguno de los colaboradores se considera un experto en sistemas de control de versión. Somos todos usuarios, algunos con más experiencia que otros. 
+Por último, ninguno de los colaboradores se considera un experto en sistemas de control de versión. Somos todos usuarios, algunos con más experiencia que otros.
 
 ## Introducción
 
@@ -27,9 +27,9 @@ Este problema no es nuevo. A diferencia de nuestro sistema "naive" en la figura 
 
 Para entender cómo funcionan los sistemas de control de version es bueno introducir un poco de la jerga. Un **repository** (comúnmente denominados "repo") es un conjunto de archivos y su historial desde su creación, mientras que  **working copy** corresponde a una versión particular del repositorio. Las fotografías tomadas en un momento determinadas se conocen como **commits**.  Asi, los repositorios nacen cuando el usuario hace el primer commit de su proyecto. En la mayoría de los sitemas de control de version estos commits se hacen de forma manual (se privilegia el control sobre los cambios)
 
-Con las definiciones anteriores en mano, podemos subdividir los sistemas de control de versión se diferencian por tres aspectos:
+Con las definiciones anteriores en mano, podemos subdividir los sistemas de control de versión por tres aspectos:
 
-1. *Locales*: mantienen la información de todos los cambios de manera loca (i.e. en el computador del usuario). El problema de este tipo de sistemas es que no permiten la colaboración.
+1. *Locales*: mantienen la información de todos los cambios de manera local (i.e. en el computador del usuario). El problema de este tipo de sistemas es que no permiten la colaboración.
 
 2. *No distribuidos*: mantienen el repositorio en un servidor y le entregan una copia de trabajo a cada usario. Para que otros usuarios vean mi avance, yo tengo que hacer un *commit* y ellos tienen que hacer un **update** de la copia de trabajo que están usando. La principal ventaja de los sistemas no distribuidos es que permiten la colaboración y que el tráfico de datos es menor. No obstante, el riesgo de perderlo todo depende de qué tan seguro sea el servidor central.
    
