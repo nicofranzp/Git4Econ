@@ -43,13 +43,14 @@ Con las definiciones anteriores en mano, podemos subdividir los sistemas de cont
 </center>
 
 
-En conclusión, un sistema de control de versión es un secretario que mantiene registros de toda la información relevante respecto de cambios hechos en un trabajo. El software elabora dichos registros cuando los usuarios están listos para "comprometer" los cambios. A pesar de que el los sitemas no distribuidos tienen menos pasos para que los cambios que hacemos puedan ser vistos por nuestros colaboradores, y que la copia de trabajo sea mas liviana en comparacion con los sitemas distribuidos, los beneficions de estos últimos --- seguridad, rapidez, comodidad--- dominan fuertemente en comparación con sus deficiencias. Esto hace que sistemas como Git y Mercurial (ambos distribuidos) sean los mas utilizados en en mundo.
+En conclusión, un sistema de control de versión es un secretario que mantiene registros de toda la información relevante respecto de cambios hechos en un trabajo compuesto por uno o más archivos. El software elabora dichos registros cuando los usuarios están listos para "comprometer" los cambios. A pesar de que el los sitemas no distribuidos tienen menos pasos para que los cambios que hacemos puedan ser vistos por nuestros colaboradores, y que la copia de trabajo sea mas liviana en comparacion con los sitemas distribuidos, los beneficions de estos últimos --- seguridad, rapidez, comodidad--- dominan fuertemente en comparación con sus deficiencias. Esto hace que sistemas como Git y Mercurial (ambos distribuidos) sean los mas utilizados en en mundo.
 
 ### Qué es Git y cómo funciona
 
 Como se mencionó anteriormente, Git es un sistema distribuido de control de versión. Uno de los más utilizados en el mundo. Fue creado en 2005 por [Linus Torvards](https://en.wikipedia.org/wiki/Linus_Torvalds) para el desarrollo del sistema operativo Linux. Lo que esencialmente hace, es registrar los cambios de una versión a otra y presenta al usuario la suma de todos esos cambios: algo asi como la integral de la derivada. La principal ventaja de este sistema es que esta optimizado para ser rápido y eficiente en el uso de espacio, además de disminuir la probabilidad de una perdida catastrofica.  
 
-Git es un software que se instala en el computador de los usuarios y pude ser utilizado de forma local (i.e. no es necesario un servidor). Una vez instalado, el usuario puede acceder a las utilidades del software a través de la linea de comando (Terminal in macOS o Command Prompt o PowerShell en Windows). Algunos sistemas operativos  o aplicaciones (como Anaconda de Python)  instalan Git por defecto, por lo que puede que ya tengas Git en tu sistema. Para verificar esto escribe `git --version` en el Terminal. Si está instalado deberías tener un mensage y no un error:
+Git es un software que se instala en el computador de los usuarios y pude ser utilizado de forma local (i.e. no es necesario un servidor ni acceso a internet). Una vez instalado, el usuario puede acceder a las utilidades del software a través de la linea de comando (Terminal in macOS o Command Prompt o PowerShell en Windows). Algunos sistemas operativos  o aplicaciones (como Python, Anaconda)  instalan Git por defecto, por lo que puede que ya tengas Git en tu sistema. Para verificar esto escribe[^cmdLineNotation]  `git --version` en el Terminal. Si está instalado deberías tener un mensage y no un error
+
 
 ``` git
 $ git --version
@@ -127,15 +128,129 @@ El resultado de escribir `git commit -m "Primer Commit"` es un registro llamado 
 Para una descripción mas detallada de cómo utilizar Git en el *command line* recomendamos revisar  el siguiente [link](https://git-scm.com/book/en/v2) 
 ### Trabajando colaborativamente con el "yo" del futuro y pasado
 
-Como vimos en la sección anterior,  lo único que se necesita para empezar a utilizar Git, es Git y un computador con sistema operativo Linux, Windows o MacOS. Esto nos permite empezar a llevar un control de todas las versiones de nuestro proyecto. En esta sección presentamos algunas de las herraminetas (y terminología) que permite hacer esto de forma eficiente.
+Como vimos en la sección anterior,  lo único que se necesita para empezar a utilizar Git un computador con sistema operativo Linux, Windows o MacOS y la instalación del software. Esto nos permite empezar a llevar un control de todas las versiones de nuestro proyecto. En esta sección presentamos algunas de las herraminetas (y terminología) que permite hacer esto de forma eficiente.
+
+En el ejemplo que empezamos a trabajar en la sección anterior inicializamos nuestro repositorio e hicimos 2 *commits*.  Desde entonces el proyecto ha avanzado y ha recibido numerosos cambios principalmente al archivo *readme.md*.  Para ver el historial completo de *commits* podemos ingresar el comando `git log`, lo cual abrira una instancia de texto en el `terminal` (para salir de ella es necesario presionar `q`)
+
+<p>
+<details> <summary>git log output </summary>
+
+```git
+commit 59bb5258dedb7355ba05a7967e25ac9fd17cf093 (HEAD -> master, origin/master)
+Merge: 49cbce3 fa2bf6b
+Author: Nicolas Franz-Pattillo <nicofranzp@gmail.com>
+Date:   Fri Oct 2 16:52:05 2020 -0300
+
+    Merge branch 'master' of https://github.com/nicofranzp/Git4Econ
+
+commit 49cbce32fab852fa2741ab9b58288bd68bb1d43c
+Author: Nicolas Franz-Pattillo <nicofranzp@gmail.com>
+Date:   Fri Oct 2 16:44:45 2020 -0300
+
+    Readme edit
+
+commit fa2bf6bf6c0e924e70e57951ecb51bfa331c73b3
+Author: Nicolas <nicofranzp@users.noreply.github.com>
+Date:   Fri Oct 2 16:30:58 2020 -0300
+
+    Update Readme.md
+
+commit b317842e3b4e480d39508f4c6c44f7a00bd78297
+Author: Nicolas <nicofranzp@users.noreply.github.com>
+Date:   Fri Oct 2 16:26:29 2020 -0300
+
+    Update Readme.md
+
+commit 34869bce71c4b3c59951de90d4114bba8b74aff7
+Author: Nicolas <nicofranzp@users.noreply.github.com>
+Date:   Fri Oct 2 16:25:27 2020 -0300
+
+    Update Readme.md
+
+commit dd0a955fb45d505cc67db2703c00c0e33d9fdeb3
+Merge: d953c56 db13a7d
+Author: Nicolas <nicofranzp@users.noreply.github.com>
+Date:   Fri Oct 2 16:24:32 2020 -0300
+
+    Merge pull request #1 from DAPRBC/master
+    
+    Update Readme.md
+
+commit db13a7d773f0569a8210759b53942f9dec62397b
+Author: DAPRBC <66694900+DAPRBC@users.noreply.github.com>
+Date:   Fri Oct 2 16:20:16 2020 -0300
+
+    Update Readme.md
+    
+    Ejemplo de cómo editar este documento cómo colaborador
+
+commit d953c56ec0b2d16aac40e21b7c9bbf8f60743bac
+Author: Nicolas Franz-Pattillo <nicofranzp@gmail.com>
+Date:   Tue Sep 29 09:20:05 2020 -0300
+
+    Readme edit
+
+commit ac6d646f67a1c5c4f1bc1d3ab30f127a714403e9
+Author: Nicolas Franz-Pattillo <nicofranzp@gmail.com>
+Date:   Mon Sep 28 22:29:30 2020 -0300
+
+    Readme minor edit
+
+commit 17392e6a2b6006cb560e8f2f03efabeee4efd9d0
+Author: Nicolas Franz-Pattillo <nicofranzp@gmail.com>
+Date:   Mon Sep 28 21:50:29 2020 -0300
+
+    Readme sources added
+
+commit 38b554117559ac6db9070eb5ee4dcb9c6fb2f6e9
+Author: Nicolas Franz-Pattillo <nicofranzp@gmail.com>
+Date:   Mon Sep 28 21:45:21 2020 -0300
+
+    Readme added
+
+commit e0566e0e183a65c194e8a36f04a788caa987dccf
+Author: Nicolas Franz-Pattillo <nicofranzp@gmail.com>
+Date:   Mon Sep 28 21:29:09 2020 -0300
+
+    first commit
+(END)
+```
+</details>
+</p>
+
+Como en la mayoría de los comandos que presentamos en este documento, `git log` cuenta con opciones para satisfacer necesidades diversas. En la versión simple que mostramos acá, el listado de *commits* está ordenado de mas reciente a mas antiguo. Además muestra el identificador alpha-numérico de cada *commit*, el autor, fecha, hora y el mensaje que le dimos. En algunos registros de nuestro ejemplo además aparece la categoría **merge**. Hablaremos con más detalle de qué es y como se usa en esta y la siguiente sección. A modo introductorio mencionamos hubo cambios hechos en "lugares distintos" y que se consolidaron en ese *commit* 
+
+Si quisiéramos saber cuál es la diferencia entre cualquiér par de registros sólo debemos escribir `git diff` y los identificadores de los registros a comprar, por ejemplo `$ git diff d953c56 db13a7d`
+
+``` git
+diff --git a/Readme.md b/Readme.md
+index 8bd9930..8866332 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -2,7 +2,9 @@
+ 
+ La idea de este repositorio es documentar los beneficios del uso de *Git* en ciencias sociales y, en particular, en el campo de la Economía. La documentación estará diseñada para que personas sin experiencia previa entiendan las ventajas de este sistema de control de versión y tengan una idea de cómo incorporarlo en su estructura de trabajo. Los ejemplos se orinetarán hacia la producción de un paper académico, pero debería ser fácil para el usuario entender los alcances para el desarrollo de cualquier aplicación que utilice archivos de texto como insumo.
+ 
+-Disclaimer: este es un documento en desarrollo. Sientete con la confianza de colaborar: usamos Git, asi que cualquier cambio que le hagas puede ser incorporado de forma segura. Además, ninguno de los colaboradores se considera un experto en sistemas de control de versión. Somos todos usuarios, algunos con más experiencia que otros.
++Disclaimer: este es un documento en desarrollo. Sientete con la confianza de colaborar, por ejemplo editando este documento y generando un *pull request* (para esto hay que importarlo a tu cuenta mediante *fork*, editarlo donde tú prefieras, y enviárlo de vuelta). También puedes dejar tus preguntas y comentarios en un [*Issue*](https://github.com/nicofranzp/Git4Econ/issues/new) en GitHub. 
++
++Por último, ninguno de los colaboradores se considera un experto en sistemas de control de versión. Somos todos usuarios, algunos con más experiencia que otros.
+ 
+ ## Introducción
+ 
+(END)
+```
+El comando `git diff` muestra sólo las diferencias entre ambos registros, independientemente de cuantos *commits* hubo entre medio. Si no se ingresan *commits* para comparar, el comando analiza la versión más reciente del *working copy* con el último *commit*. El resultado es ordenado por archivo. En nuestro ejemplo solo el archivo `Readme.md` fue modificado. `diff --git a/Readme.md b/Readme.md` en el *output* nos muestra esa diferencia. Si el nombre o ruta del archivo ha sido cambiado, entonces aparecerá en esta línea. Luego, se indica la nomenclatura de qué esta en la promera versión y no el la segunda (`---`) versus que está en la segunda y no en la primera (`+++`). La forma en cómo ejecutamos el comando solo muestra diferencias en líneas. Hay otras opciones que permiten diferenciar (con colores, por ejemplo) carácter por carácter: `git diff --color-words`
+
+Hasta el momento hemos trabajado de forma lineal. Esto quiere decir que la línea temporal de ediciones es una sola (TODO: esquema lineal). No obstante, Git tiene mucho que ofrecer en edición no lineal, y cuando los proyectos tienen una o más lineas experimentales, esto puede ser de gran ayuda. La forma en que esto se materializa es a través de diferentes "ramas" (**branch**) , las cuales, al ser creadas, mantienen una historia paralela del proyecto. Cuando la rama experimental ha sido lo suficientemente probada, esta puede ser mezclada con la lina original (usualmente llamada `master`) . Este acto es denominado como `merge`. En nuestro `git log` anterior, aparecieron dos registros con la categoría `merge`. Esto es porque uno de ellos fue modificado directamente en GitHub, lo cual es considerado el "origen" del repositorio, y por lo tanto una rama distinta.
+
+
 
 Algunas de la recomendaciones son:
 1. **Hacer *commits* frecuentemente y darles un nombre con sentido**: la idea es evitar la vieja práctica de nombrar las versiones como "version final", "version final final", y comprometerse a informar al "yo"  del futuro (o potenciales colaboradores) cuáles son los principales objetivos de este *commit*.  Por ejemplo, 
 2. Usar ramas para probar nuevos  
 
 
-
-- [ ]  Mencionar que es el branching y trabajo no lineal
 - [ ]  Mencionar que Git no es mágico!! Igualmente requiere un orden y manejo de conflictos 
 
 
@@ -143,6 +258,10 @@ Algunas de la recomendaciones son:
 
 - [ ]  La idea principal aquí es explicar como compartir los repositorios de forma segura y de cómo Git ayuda a hacerlo de forma ordenada.
 - [ ]  En esta sección se introducen los UI de GitHub o GitLab
+- [ ] `git push`, `git fetch` +  `git merge` = `git pull` 
+- [ ] `git merge` vs `git rebase`
+
+
 
 #### Protocolos de comunicación de Git
 
@@ -163,3 +282,6 @@ Algunas de la recomendaciones son:
   - [ ]  Pull requests
   - [ ]  Issues
   
+
+#### NOTAS
+[^cmdLineNotation]: La notación estándar para documentar la línea de comando es que los argumentos ingresados por el usuario es antecedida por el símbolo peso `$`, mientras que el resto corresponde al *output* del sistema
