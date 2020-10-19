@@ -1,5 +1,7 @@
 {
 	"cSpell.words": [
+		"DAPRBC",
+		"Torvards",
 		"accumarray",
 		"deter",
 		"lagr",
@@ -11,7 +13,8 @@
 		"simul deter",
 		"struct",
 		"struct table",
-		"table"
+		"table",
+		"unstage"
 	], 
 	"markdown.styles":[ 
 		"src/css/dark-material.css"
