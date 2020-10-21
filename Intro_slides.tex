@@ -86,8 +86,7 @@
 
 %% TABLE OF CONTENTS
 \begin{frame}[allowframebreaks,b]{Table of contents}
-	\tableofcontents
-	% \tableofcontents[hideallsubsections]
+	\tableofcontents[hideallsubsections]
 \end{frame}
 
 %--------------------------------------------------------------------------------------
@@ -378,22 +377,175 @@
 			\includegraphics[width=0.8\textwidth]{src/images/gitLogNobranch.png}
 
 		\medskip
-		
+
+		\onslide<+->{Ahora nuestro árbol está limpio y tenemos una visualización de cómo los cambios sucedieron}
 	\end{exampleblock}
 \end{frame}
+
+\begin{frame}{Comandos git y algunos comentarios}
+	\begin{columns}[T, onlytextwidth]
+		\column{0.5\textwidth}
+		\begin{itemize}[<+->]
+			\item Los comandos que utilizamos tienen opciones que los hacen muy versátiles
+			\vfill \item Git es más inteligente de lo que usualmente pensamos
+			\vfill \item Cuando hay conflictos git no nos dejará hacer los cambios sin resolverlos
+			\vfill \item Cuando hay información no guardada en una rama, git no nos permitirá saltar a otra \textcolor{UBCgrey}{(para esto existe el comando stash)}
+			\vfill \item La mayoría de los comandos Git agregan información \textcolor{UBCgrey}{(muy rara vez la eliminan)}
+		\end{itemize}
+		\column{0.5\textwidth}
+		\begin{itemize}[<+->]
+			\item \textbf{git init}: inicializar un repositorio
+			\vfill \item \textbf{git add}: presentar cambios en el escenario
+			\vfill \item \textbf{git commit}: registrar los cambios
+			\vfill \item \textbf{git status}: estado del repositorio
+			\vfill \item \textbf{git log}: listado de \emph{commits}
+			\vfill \item \textbf{git diff}: diferencias entre un \emph{commit} y otro.
+			\vfill \item \textbf{git branch}: crear una nueva rama.
+			\vfill \item \textbf{git checkout}: saltar de una rama a otra.
+			\vfill \item \textbf{git merge}: mezclar ramas.
+		\end{itemize}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[standout]{Ejemplo A}
+	Preguntas?
+\end{frame}
+
 %--------------------------------------------------------------------------------------
 %										SECCION: UI
 %--------------------------------------------------------------------------------------
 \section{Interfaces de usuario, ``la nube'' y redes sociales}
 
+\begin{frame}[<+->]{\secname}
+	\begin{itemize}
+		\item Usar git en la línea de comando puede tomar algún tiempo.
+		\vfill \item Las interfaces de usuario facilitan el proceso, pero involucran preferencias personales.
+		\vfill \item Una de las UI populares es VS Code de Microsoft
+		\begin{itemize}
+			\item Integración Git desde su instalación 
+			\item Variados lenguages de programación y herramientas que facilitan la escritura de código.
+			\item Marketplace con extensiones gratuitas 
+		\end{itemize}
+		\begin{exampleblock}{VS code}
+			Desde VS code se puede utilizar y compilar \LaTeX ~ y markdown. Se puede utilizar Matlab, python y R. Se puede tener un sistema de punteros \emph{TODO} y \emph{FIXME}. Sistemas de corrección ortográfico (tanto para texto como código), sistema de brackets colorizados, etc
+		\end{exampleblock}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{GUI's}
+	\begin{figure}[H]
+		\centering
+		\caption{VScode, git diff}
+		\vspace{-0.5cm}
+		\includegraphics[width=\textwidth]{src/images/VScodeDiff.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[<+->]{GUI's}
+	\begin{figure}[H]
+		\centering
+		\caption{VScode, file history}
+		\vspace{-0.5cm}
+		\includegraphics[width=0.9\textwidth]{src/images/VScodeFileHistory.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[<+->]{GUI's}
+	\begin{figure}[H]
+		\centering
+		\caption{VScode, git diff (seleccionando commits)}
+		\vspace{-0.5cm}
+		\includegraphics[width=0.9\textwidth]{src/images/VScodeCompareCommits.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[<+->]{GUI's}
+	\begin{figure}[H]
+		\centering
+		\caption{VScode, git diff (seleccionando commits)}
+		\vspace{-0.5cm}
+		\includegraphics[width=0.9\textwidth]{src/images/VScodeLogGraph.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[<+->]{Colaboración con Git}
+	\begin{itemize}
+		\item Anteriormente mencionamos que git no requiere servidores.
+		\vfill\item En teoría, podríamos compartir un repositorio utilizando un disco duro en común
+		\vfill\item También se pueden crear permisos de lectura y escritura (ver documentación de \href{https://git-scm.com/docs/git-init}{git init})
+		\vfill\item No obstante, un servidor git permite crear un espacio común y seguro!
+		\vfill\item Git ocupa los siguientes protocolos de comunicación:
+		\begin{enumerate}
+			\item Local
+			\item HTTP y HTTPS
+			\item SSH
+			\item GIT 
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{``La nube'' y redes sociales}
+	\begin{itemize}
+		\item ``La nube'' no es mas que un grupo de servidores
+		\vfill\item Para colaborar con git sólo nos hace falta aprender los siguentes comandos
+		\begin{enumerate}
+			\vfill\item git remote
+			\vfill\item git clone
+			\vfill\item git pull (git fetch + git commit)
+			\vfill\item git push
+		\end{enumerate}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{``La nube'' y redes sociales}
+	\begin{itemize}
+		\item Sin embargo hay un componente humano que hace falta
+		\vfill\item Tener la información no es lo mismo que entender la información
+		\vfill \item Este espacio lo llenan las redes sociales, que permiten dar fluidez a la comunicación
+		\begin{itemize}
+			\vfill \item Archivos Readme y Wiki
+			\vfill \item Issues
+			\vfill \item Forks 
+			\vfill \item Pull requests 
+		\end{itemize}
+		\vfill \item Las mas famosas son GitHub, GitLab y BitBucket.
+		\vfill \item Se pueden intalar en redes privadas. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{GitHub}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\textwidth]{src/images/gitHub.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}[standout]{\secname}
+	Preguntas?
+\end{frame}
 %--------------------------------------------------------------------------------------
-%										SECCION: UI
+%										SECCION: CONCLUSIONES
 %--------------------------------------------------------------------------------------
 \section{Buenas prácticas y Conclusiones}
 
+\begin{frame}[<+->]{Comentarios finales}
+	\begin{itemize}
+		\item Git es un secretario que lleva registro completo del repositorio.
+		\item Git no es mágico. Requiere que los equipos definan estrategias para crear ramas y resolver conflictos.
+		\vfill\item Su utilidad aumenta exponencialmente cuando se siguen los siguentes tips:
+		\begin{enumerate}
+			\vfill\item \textbf{Hacer commits frecuentes y con sentido}
+			\vfill\item \textbf{Usar ramas para experimentar y combinarlas cuando los experimentos funcionan}
+			\vfill\item \textbf{Actualizar el repositorio constantemente}
+		\end{enumerate}
+		\vfill\item Las GUI's ayudan a humanizar git.
+		\vfill\item Las redes sociales en torno a git son herraminetas de colaboración y comunicación muy poderosas. \textcolor{UBCgrey}{Digitalizan espacios análogos y evitan muchas reuniones)}
+	\end{itemize}
+\end{frame}
 
-
-
+\begin{frame}[standout]{\secname}
+	Preguntas?
+\end{frame}
 %--------------------------------------------------------------------------------------
 %										 END OF PRESENTATION SLIDES
 %--------------------------------------------------------------------------------------
