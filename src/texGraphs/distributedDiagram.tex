@@ -3,7 +3,7 @@
 % !TEX options = -shell-escape -synctex=1 -interaction=nonstopmode -file-line-error "%DOC%"
 
 \documentclass[margin=10pt, convert={outname=../images/distributedDiagram}]{standalone}    
-\usepackage{pgfplots, pgf, natbib, textpos,ragged2e, colortbl, cancel, array, pgfplotstable, amsmath} 
+\usepackage{pgfplots, pgf, natbib, textpos, ragged2e, colortbl, cancel, array, pgfplotstable, amsmath} 
 
 \usetikzlibrary{calc, positioning, backgrounds, decorations.markings, external, arrows.meta, arrows, shapes, snakes, fit}
 \usetikzlibrary{shapes,snakes}
@@ -20,7 +20,7 @@
 	%<*tikzPic>
 	
 	\pgfplotsset{scale only axis, width=0.85\textwidth, height=0.5\textwidth}
-	\begin{tikzpicture}[]
+	\begin{tikzpicture}[scale=0.9, every node/.style={scale=0.9}]
 		
 		% Server
 		\node[shape=rectangle, draw=UBCblue, fill=UBClblue] (server) at (0,2.5) {\color{white}Repository};
