@@ -1,0 +1,104 @@
+<svg data-id="VCS" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="600" height="600" viewBox="0, 0, 600, 600">
+	<g data-id="c1">
+		<path d="M132.669,530 C66.395,530 12.669,465.529 12.669,386 C12.669,306.471 66.395,242 132.669,242 C198.943,242 252.669,306.471 252.669,386 C252.669,465.529 198.943,530 132.669,530 z" fill="#A4A4A4" fill-opacity="0.378"/>
+		<path d="M66.669,285 L198.669,285 L198.669,325 L66.669,325 L66.669,285 z" fill="#3660FA"/>
+		<text transform="matrix(1, 0, 0, 1, 132.669, 305)">
+			<tspan x="-57.564" y="8.5" font-family="Helvetica-Light" font-size="24" fill="#FCF9F9">Repository</tspan>
+		</text>
+			<path d="M42.669,424 L222.669,424 L222.669,464 L42.669,464 L42.669,424 z" fill="#26B42C"/>
+		<text transform="matrix(1, 0, 0, 1, 132.669, 444)">
+			<tspan x="-75.792" y="8" font-family="Helvetica-Light" font-size="24" fill="#FFFFFF">Working Copy</tspan>
+		</text>
+		<text transform="matrix(1, 0, 0, 1, 132.669, 554.5)">
+		<tspan x="-67.683" y="6.5" font-family="Helvetica-Light" font-size="21" fill="#7E7E7E">Computador 1</tspan>
+		</text>
+		<path d="M125.669,424.5 L123.869,335.398" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+		<path d="M127.168,335.331 L123.691,326.6 L120.57,335.465 M123.869,335.398 L123.691,326.6" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+		<path d="M139.669,325.5 L141.469,414.602" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+		<path d="M138.17,414.669 L141.647,423.4 L144.768,414.535 M141.469,414.602 L141.647,423.4" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+		<text transform="matrix(-0, -1, 1, -0, 112.169, 379)">
+			<tspan x="-29.502" y="6" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">commit</tspan>
+		</text>
+		<text transform="matrix(0, 1, -1, 0, 152.669, 374.5)">
+			<tspan x="-28.512" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">update</tspan>
+		</text>
+	</g>
+	<g>
+	  <path d="M296.669,177 C245.859,177 204.669,152.6 204.669,122.5 C204.669,92.4 245.859,68 296.669,68 C347.479,68 388.669,92.4 388.669,122.5 C388.669,152.6 347.479,177 296.669,177 z" fill="#A4A4A4" fill-opacity="0.378"/>
+	  <g>
+		<path d="M230.669,102.5 L362.669,102.5 L362.669,142.5 L230.669,142.5 L230.669,102.5 z" fill="#3660FA"/>
+		<text transform="matrix(1, 0, 0, 1, 296.669, 122.5)">
+		  <tspan x="-57.564" y="8.5" font-family="Helvetica-Light" font-size="24" fill="#FCF9F9">Repository</tspan>
+		</text>
+	  </g>
+	  <text transform="matrix(1, 0, 0, 1, 296.669, 44.5)">
+		<tspan x="-39.081" y="7.5" font-family="Helvetica-Light" font-size="21" fill="#7E7E7E">Servidor</tspan>
+	  </text>
+	</g>
+	<g>
+	  <g>
+		<path d="M403.732,256.963 L357.622,180.698" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+		<path d="M360.446,178.991 L353.069,173.167 L354.798,182.405 M357.622,180.698 L353.069,173.167" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+	  </g>
+	  <g>
+		<path d="M367.222,163.726 L413.332,239.991" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+		<path d="M410.508,241.698 L417.885,247.521 L416.156,238.283 M413.332,239.991 L417.885,247.521" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+	  </g>
+	  <text transform="matrix(0.5, 0.866, -0.866, 0.5, 366.79, 220.344)">
+		<tspan x="-14.499" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">pull</tspan>
+	  </text>
+	  <text transform="matrix(0.5, 0.866, -0.866, 0.5, 401.431, 200.344)">
+		<tspan x="-20.016" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">fetch</tspan>
+	  </text>
+	</g>
+	<g>
+	  <g>
+		<path d="M183.51,249.463 L226.502,171.398" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+		<path d="M229.393,172.99 L230.747,163.69 L223.611,169.806 M226.502,171.398 L230.747,163.69" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+	  </g>
+	  <g>
+		<path d="M246,171.226 L203.008,249.291" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+		<path d="M200.118,247.699 L198.763,256.999 L205.899,250.883 M203.008,249.291 L198.763,256.999" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+	  </g>
+	  <text transform="matrix(0.5, -0.866, 0.866, 0.5, 196.069, 199.344)">
+		<tspan x="-14.499" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">pull</tspan>
+	  </text>
+	  <text transform="matrix(0.5, -0.866, 0.866, 0.5, 230.71, 219.344)">
+		<tspan x="-20.016" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">fetch</tspan>
+	  </text>
+	</g>
+	<g>
+	  <path d="M467.331,530 C401.057,530 347.331,465.529 347.331,386 C347.331,306.471 401.057,242 467.331,242 C533.605,242 587.331,306.471 587.331,386 C587.331,465.529 533.605,530 467.331,530 z" fill="#A4A4A4" fill-opacity="0.378"/>
+	  <g>
+		<path d="M401.331,285 L533.331,285 L533.331,325 L401.331,325 L401.331,285 z" fill="#3660FA"/>
+		<text transform="matrix(1, 0, 0, 1, 467.331, 305)">
+		  <tspan x="-57.564" y="8.5" font-family="Helvetica-Light" font-size="24" fill="#FCF9F9">Repository</tspan>
+		</text>
+	  </g>
+	  <g>
+		<path d="M377.331,424 L557.331,424 L557.331,464 L377.331,464 L377.331,424 z" fill="#26B42C"/>
+		<text transform="matrix(1, 0, 0, 1, 467.331, 444)">
+		  <tspan x="-75.792" y="8" font-family="Helvetica-Light" font-size="24" fill="#FFFFFF">Working Copy</tspan>
+		</text>
+	  </g>
+	  <text transform="matrix(1, 0, 0, 1, 467.331, 554.5)">
+		<tspan x="-67.683" y="6.5" font-family="Helvetica-Light" font-size="21" fill="#7E7E7E">Computador 2</tspan>
+	  </text>
+	  <g>
+		<g>
+		  <path d="M460.331,424.5 L458.531,335.398" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+		  <path d="M461.83,335.331 L458.353,326.6 L455.232,335.465 M458.531,335.398 L458.353,326.6" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+		</g>
+		<g>
+		  <path d="M474.331,325.5 L476.131,414.602" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+		  <path d="M472.832,414.669 L476.309,423.4 L479.43,414.535 M476.131,414.602 L476.309,423.4" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+		</g>
+		<text transform="matrix(-0, -1, 1, -0, 446.831, 379)">
+		  <tspan x="-29.502" y="6" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">commit</tspan>
+		</text>
+		<text transform="matrix(0, 1, -1, 0, 487.331, 374.5)">
+		  <tspan x="-28.512" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">update</tspan>
+		</text>
+	  </g>
+	</g>
+</svg>
