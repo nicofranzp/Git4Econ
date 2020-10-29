@@ -14,7 +14,8 @@
 		"struct",
 		"struct table",
 		"table",
-		"unstage"
+		"unstage",
+		"verticator"
 	], 
 	"markdown.styles":[ 
 		"src/css/dark-material.css"
