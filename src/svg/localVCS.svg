@@ -1,0 +1,26 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="600" height="600" viewBox="0, 0, 600, 600">
+<g data-id="c1">
+  <path d="M300,425 C233.726,425 180,360.529 180,281 C180,201.471 233.726,137 300,137 C366.274,137 420,201.471 420,281 C420,360.529 366.274,425 300,425 z" fill="#A4A4A4" fill-opacity="0.378"/>
+  <path d="M234,180 L366,180 L366,220 L234,220 L234,180 z" fill="#3660FA"/>
+  <text transform="matrix(1, 0, 0, 1, 300, 200)">
+    <tspan x="-57.564" y="8.5" font-family="Helvetica-Light" font-size="24" fill="#FCF9F9">Repository</tspan>
+  </text>
+  <path d="M210,319 L390,319 L390,359 L210,359 L210,319 z" fill="#26B42C"/>
+  <text transform="matrix(1, 0, 0, 1, 300, 339)">
+    <tspan x="-75.792" y="8" font-family="Helvetica-Light" font-size="24" fill="#FFFFFF">Working Copy</tspan>
+  </text>
+  <text transform="matrix(1, 0, 0, 1, 300, 449.5)">
+    <tspan x="-67.683" y="6.5" font-family="Helvetica-Light" font-size="21" fill="#7E7E7E">Computador 1</tspan>
+  </text>
+  <path d="M293,319.5 L291.2,230.398" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+  <path d="M294.499,230.331 L291.022,221.6 L287.901,230.465 M291.2,230.398 L291.022,221.6" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+  <path d="M307,220.5 L308.8,309.602" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+  <path d="M305.501,309.669 L308.978,318.4 L312.099,309.535 M308.8,309.602 L308.978,318.4" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+  <text transform="matrix(-0, -1, 1, -0, 279.5, 274)">
+    <tspan x="-29.502" y="6" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">commit</tspan>
+  </text>
+  <text transform="matrix(0, 1, -1, 0, 320, 269.5)">
+    <tspan x="-28.512" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">update</tspan>
+  </text>
+</g>
+</svg>

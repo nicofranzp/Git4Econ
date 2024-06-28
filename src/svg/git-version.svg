@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="420" height="160" viewBox="0, 0, 420, 160">
+  <g id="bash-bg"/>
+  <g id="typing_area" display="none">
+    <path d="M10,40 L410,40 L410,500 L10,500 L10,40 z" fill="#CB1D38"/>
+  </g>
+  <g id="Layer_3">
+    <path d="M1.7,45 L416.966,45 C423.678,45 416.966,45 416.966,45 L416.966,152.25 C416.966,153.769 411.524,155 404.812,155 L13.854,155 C7.142,155 1.7,153.769 1.7,152.25 L1.7,45 C11.587,45 -5.012,45 1.7,45 z" fill="#000000"/>
+    <path d="M13.502,5 L405.325,5 C411.855,5 417.148,8.582 417.148,13 L417.098,45 C417.098,45 423.628,45 417.098,45 L1.678,45 C-4.852,45 10.394,45 1.678,45 L1.678,13 C1.678,8.582 6.972,5 13.502,5 z" fill="#504F4F"/>
+    <g>
+      <path d="M82.168,32.25 C77.843,32.25 74.336,29.004 74.336,25 C74.336,20.996 77.843,17.75 82.168,17.75 C86.494,17.75 90,20.996 90,25 C90,29.004 86.494,32.25 82.168,32.25 z" fill="#00CA4E"/>
+      <path d="M54.526,32.25 C50.2,32.25 46.694,29.004 46.694,25 C46.694,20.996 50.2,17.75 54.526,17.75 C58.851,17.75 62.358,20.996 62.358,25 C62.358,29.004 58.851,32.25 54.526,32.25 z" fill="#FFBD44"/>
+      <path d="M26.884,32.25 C22.558,32.25 19.052,29.004 19.052,25 C19.052,20.996 22.558,17.75 26.884,17.75 C31.209,17.75 34.716,20.996 34.716,25 C34.716,29.004 31.209,32.25 26.884,32.25 z" fill="#FF605C"/>
+    </g>
+    <text transform="matrix(1, 0, 0, 1, 210, 25)">
+      <tspan x="-16.888" y="5.75" font-family="HelveticaNeue-Light" font-size="16" fill="#F4F4F4">bash</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 210, 100)">
+      <tspan x="-200" y="-14.723" font-family="Helvetica-Light" font-size="21" kerning="0" fill="#A5A5A5">~ </tspan>
+      <tspan x="-180.302" y="-14.723" font-family="Menlo-Regular" font-size="21" kerning="0" fill="#F7FBFC">$ </tspan>
+      <tspan id="text-to-be-typed" x="-155.016" y="-14.723" font-family="Menlo-Regular" font-size="21" kerning="0" fill="#F9F6F9">git --version</tspan>
+      <tspan x="-200" y="15.277" font-family="Helvetica-Light" font-size="21" fill="#00FF1A">git version 2.24.3 (Apple-Git-128)</tspan>
+    </text>
+  </g>
+</svg>

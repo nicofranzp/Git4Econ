@@ -1,0 +1,70 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="600" height="600" viewBox="0, 0, 600, 600">
+    <g>
+      <path d="M111,357 C49.696,357 -0,331.256 -0,299.5 C-0,267.744 49.696,242 111,242 C172.304,242 222,267.744 222,299.5 C222,331.256 172.304,357 111,357 z" fill="#A4A4A4" fill-opacity="0.378"/>
+      <g>
+        <path d="M21,279.5 L201,279.5 L201,319.5 L21,319.5 L21,279.5 z" fill="#26B42C"/>
+        <text transform="matrix(1, 0, 0, 1, 111, 299.5)">
+          <tspan x="-75.792" y="8" font-family="Helvetica-Light" font-size="24" fill="#FFFFFF">Working Copy</tspan>
+        </text>
+      </g>
+      <text transform="matrix(1, 0, 0, 1, 111, 380.5)">
+        <tspan x="-67.683" y="6.5" font-family="Helvetica-Light" font-size="21" fill="#7E7E7E">Computador 1</tspan>
+      </text>
+    </g>
+    <g>
+      <path d="M296.669,177 C245.859,177 204.669,152.6 204.669,122.5 C204.669,92.4 245.859,68 296.669,68 C347.479,68 388.669,92.4 388.669,122.5 C388.669,152.6 347.479,177 296.669,177 z" fill="#A4A4A4" fill-opacity="0.378"/>
+      <g>
+        <path d="M230.669,102.5 L362.669,102.5 L362.669,142.5 L230.669,142.5 L230.669,102.5 z" fill="#3660FA"/>
+        <text transform="matrix(1, 0, 0, 1, 296.669, 122.5)">
+          <tspan x="-57.564" y="8.5" font-family="Helvetica-Light" font-size="24" fill="#FCF9F9">Repository</tspan>
+        </text>
+      </g>
+      <text transform="matrix(1, 0, 0, 1, 296.669, 44.5)">
+        <tspan x="-39.081" y="7.5" font-family="Helvetica-Light" font-size="21" fill="#7E7E7E">Servidor</tspan>
+      </text>
+    </g>
+    <g>
+      <g>
+        <path d="M185.802,252.517 L228.795,174.452" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+        <path d="M231.685,176.044 L233.04,166.744 L225.904,172.86 M228.795,174.452 L233.04,166.744" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+      </g>
+      <g>
+        <path d="M248.293,174.28 L205.301,252.345" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+        <path d="M202.41,250.753 L201.055,260.053 L208.191,253.937 M205.301,252.345 L201.055,260.053" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+      </g>
+      <text transform="matrix(0.5, -0.866, 0.866, 0.5, 198.361, 202.398)">
+        <tspan x="-29.502" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">commit</tspan>
+      </text>
+      <text transform="matrix(0.5, -0.866, 0.866, 0.5, 242.095, 227.648)">
+        <tspan x="-28.512" y="-5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">update</tspan>
+      </text>
+    </g>
+    <g>
+      <path d="M482,357 C420.696,357 371,331.256 371,299.5 C371,267.744 420.696,242 482,242 C543.304,242 593,267.744 593,299.5 C593,331.256 543.304,357 482,357 z" fill="#A4A4A4" fill-opacity="0.378"/>
+      <g>
+        <path d="M392,279.5 L572,279.5 L572,319.5 L392,319.5 L392,279.5 z" fill="#26B42C"/>
+        <text transform="matrix(1, 0, 0, 1, 482, 299.5)">
+          <tspan x="-75.792" y="8" font-family="Helvetica-Light" font-size="24" fill="#FFFFFF">Working Copy</tspan>
+        </text>
+      </g>
+      <text transform="matrix(1, 0, 0, 1, 482, 380.5)">
+        <tspan x="-67.683" y="6.5" font-family="Helvetica-Light" font-size="21" fill="#7E7E7E">Computador 2</tspan>
+      </text>
+    </g>
+    <g>
+      <g>
+        <path d="M385.718,264.021 L339.608,187.757" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+        <path d="M342.432,186.049 L335.055,180.226 L336.784,189.464 M339.608,187.757 L335.055,180.226" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+      </g>
+      <g>
+        <path d="M349.208,170.785 L395.318,247.049" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="9"/>
+        <path d="M392.494,248.757 L399.871,254.58 L398.142,245.342 M395.318,247.049 L399.871,254.58" fill-opacity="0" stroke="#7E7E7E" stroke-width="1.5" stroke-opacity="1"/>
+      </g>
+      <text transform="matrix(0.5, 0.866, -0.866, 0.5, 348.777, 227.403)">
+        <tspan x="-29.502" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">commit</tspan>
+      </text>
+      <text transform="matrix(0.5, 0.866, -0.866, 0.5, 385.15, 206.403)">
+        <tspan x="-28.512" y="5.5" font-family="Helvetica-Light" font-size="18" fill="#7E7E7E">update</tspan>
+      </text>
+    </g>
+</svg>
