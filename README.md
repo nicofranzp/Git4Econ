@@ -1,62 +1,104 @@
 # Git  para economistas
 
-La idea de este repositorio es documentar los beneficios del uso de *Git* en ciencias sociales y, en particular, en el campo de la Economía. La documentación estará diseñada para que personas sin experiencia previa entiendan las ventajas de este sistema de control de versión y tengan una idea de cómo incorporarlo en su estructura de trabajo. Los ejemplos se orinetarán hacia la producción de un paper académico, pero debería ser fácil para el usuario entender los alcances para el desarrollo de cualquier aplicación que utilice archivos de texto como insumo.
+La idea de este repositorio es documentar los beneficios del uso de *Git* y *GitHub* en ciencias sociales. La documentación esta diseñada para que personas sin experiencia previa entiendan las ventajas de este sistema de control de versión y tengan una idea de cómo incorporarlo en su estructura de trabajo. Debería ser fácil para el usuario entender los alcances para el desarrollo de cualquier aplicación que utilice archivos de texto como insumo.
 
-Es importante entender que los sistemas de control de versión no sustituyen la buena organización personal y grupal. Las malas prácticas tienden a replicarse y sus consecuencias pueden empeorar si los usuarios se sienten mas cómodos con ellas. No existe una estrategia única para evitar esto: claramente depende del tipo de proyecto en el que se trabaje (e.g. no es lo mismo trabajar de a 2 personas que de a 50). En este documento trataremos de mencionar las que más se repiten.
+Es importante entender que los sistemas de control de versión no sustituyen la buena organización personal y grupal. Las malas prácticas que mantenemos en nuestra vida digital tienden a replicarse usando Git, y sus consecuencias pueden empeorar si los usuarios no son consientes de ellas. No existe una estrategia única para evitar esto: claramente depende del tipo de proyecto en el que se trabaje (e.g. no es lo mismo trabajar de a 2 personas que de a 50). En este documento trataremos de mencionar lo que por experiencia consideramos "mejores prácticas" y prácticas que creemos se deben evitar.
 
 Revisa la presentación [AQUI](https://nicofranzp.gihub.io/git4econ/)
+
 ## Introducción
 
-Git es us software de control de versión que se ha popularizado exponencialmente en los últimos 10 años. A pesar de su alta popularidad, mayormente entre programadores, existen muchos mitos y confusión sobre su uso y capacidades. Esto se debe principalmente a que su masificación se ha hecho mediante de interfaces de usuario (**UI**, por User Interface) que lo expanden y hacen más amigable con el usuario. Por ejemplo, hoy en día el promedio de los economistas conoce o ha escuchado el nombre de la plataforma GitHub pero no las diferencias con Git (a secas).
+### Qué nos dice chatGPT sobre versionar nuestro trabajo
 
-En esta sección sección explicamos las diferencias entre los distintos tipos de control de version, abordamos en particular el uso de Git y, finalmente, profundizamos en algunas de las interfeces de usuario mas populares.
+Entender el mundo depende cada vez más de conjuntos de datos complejos, software estadístico y proyectos colaborativos. En este contexto, los **sistemas de control de versiones (VCS)  buscan documentar ordenadamente los cambios que se realizan en los archivos dentro de un proyecto**. Las razones del porqué esto es deseado para los investigadores y analistas se sintetiza en los siguientes puntos:
 
-### Control de versión
+1. **Reproducibilidad y Transparencia**: Uno de los principios fundamentales de la investigación científica es la reproducibilidad. El control de versiones asegura que cada cambio realizado en un proyecto sea rastreado y documentado, permitiendo que otros investigadores puedan replicar los resultados con precisión. Al mantener un historial completo de modificaciones, los investigadores pueden proporcionar transparencia en sus metodologías, mejorando la credibilidad y la fiabilidad de sus hallazgos.
 
-El control de versión, como su nombre lo indica, busca documentar ordenadamente los cambios que se realizan en uno o varios archivos dentro de un proyecto. Las razones del porqué esto es deseado son diversas. Una de las  más probables es que algunos cambios tienen efectos no proyectados en el resultado final y que poder analizarlos --- o deshacerlos --- ordenadamente agrega valor en la fluidez del proyecto.
+2. **Colaboración**: la investigación a menudo implica la colaboración entre varias personas, a veces en diferentes instituciones y países. El control de versiones facilita una colaboración fluida al permitir que múltiples colaboradores trabajen en el mismo proyecto simultáneamente. Los cambios realizados por diferentes miembros del equipo se pueden fusionar de manera eficiente y los conflictos se pueden resolver de forma sistemática. Este aspecto colaborativo es crucial para los proyectos de investigación económica a gran escala que requieren la contribución de diversas especialidades.
 
-Este es un problema que encontramos en la vida diaria. A modo de ejemplo, imaginemos que estamos escribiendo un paper que requiere calibrar un modelo con distintos parámetros. En un mundo en donde el modelo es una constante y una pendiente, hacer cambios y recordarlos no es tan difícil. Pero  si el modelo contiene 10 parámetros, por ejemplo, la complejidad aumenta varios ordenes de magnitud. Ahora supongamos que encontramos una representación que nos gusta, pero nos gustaría seguir explorando otras posibilidades. Lo que hará el usuario promedio es hacer una copia completa del estado actual del proyecto y guaradarla con un nombre tipo: "20200925_calibracionBuena". Pero qué pasa si además de estar cambiando la calibración estamos cambiando el algoritmo de solución, algunos detalles en el cuerpo del paper? Lo mas probable es que una vez que el proyecto avance los cambios se hagan más difíciles de trazar y, por lo tanto, son más costosos de hacer. Este problema se multiplica si se trabaja de forma colaborativa. Quién cambió qué? qué pasa si hago un cambio catastrófico y no respaldé la información?
+3. **Gestión de Errores**: en cualquier proyecto de investigación, los errores son inevitables. El control de versiones proporciona una red de seguridad al permitir que los investigadores vuelvan a versiones anteriores de su trabajo si se descubre un error. Esta característica es particularmente valiosa en el análisis de datos, donde un error en el código o en la manipulación de datos puede llevar a inexactitudes significativas. Al mantener un historial de cambios, los investigadores pueden identificar cuándo y dónde se introdujo un error y corregirlo sin comprometer todo el proyecto.
+
+4. **Organización del Proyecto**: los proyectos de investigación en economía a menudo implican numerosos archivos, incluidos conjuntos de datos, scripts, informes y revisiones de literatura. El control de versiones ayuda a organizar estos archivos de manera sistemática. Los investigadores pueden crear ramas para diferentes aspectos del proyecto, como limpieza de datos, análisis y redacción. Esta estructura organizativa facilita la gestión de proyectos complejos y asegura que todos los componentes se integren sin problemas.
+
+5. **Documentación**: Los sistemas de control de versiones permiten una documentación detallada de los cambios a través de mensajes de confirmación. Estos mensajes proporcionan contexto y razones para las modificaciones, lo cual es invaluable para entender la evolución de un proyecto. Esta documentación ayuda tanto a los miembros actuales del equipo como a futuros investigadores que puedan construir sobre el trabajo. Asegura la continuidad y preserva el conocimiento adquirido durante el proceso de investigación.
+
+6. **Adaptabilidad**: La investigación económica es a menudo iterativa, con hipótesis iniciales que se prueban, revisan y refinan basadas en resultados preliminares. El control de versiones apoya este proceso iterativo al permitir que los investigadores experimenten con diferentes enfoques sin temor a perder trabajos anteriores. Se pueden crear ramas para diferentes hipótesis o metodologías, y las más prometedoras se pueden fusionar en el proyecto principal a medida que avanza la investigación.
+
+7. **Publicación y Revisión**: Al enviar investigaciones para su publicación, a menudo se requiere que los economistas proporcionen sus datos y código para revisión por pares. Los sistemas de control de versiones facilitan este proceso al ofrecer un historial claro y accesible del proyecto de investigación. Los revisores pueden examinar el código, entender los cambios realizados y verificar los resultados, mejorando así la integridad del proceso de revisión por pares.
+
+### La vida de antes de Git
+
+Antes de la aparición de los sistemas de control de versiones, los economistas y los investigadores dependían de métodos más manuales y menos eficientes para gestionar sus proyectos y colaborar con otros. Estos métodos tradicionales presentaban varios desafíos y a menudo llevaban a confusión, ineficiencias y errores.
+
+En ausencia de sistemas de control de versiones, los economistas gestionaban sus archivos manualmente. Esto generalmente implicaba crear múltiples copias de documentos y conjuntos de datos, a menudo con diferentes convenciones de nombres para indicar varias versiones (por ejemplo, "análisis_v1.docx," "análisis_final.docx," "análisis_final_final.docx"). Este enfoque no solo llenaba el espacio de trabajo, sino que también dificultaba el seguimiento de los cambios e identificar la última versión de un documento. Como resultado, los investigadores a menudo pasaban mucho tiempo buscando el archivo correcto o fusionando cambios de diferentes versiones, aumentando la probabilidad de errores e inconsistencias.
+
+La colaboración antes del control de versiones se realizaba principalmente a través de correos electrónicos y unidades compartidas. Los investigadores enviaban archivos de un lado a otro por correo electrónico o los subían a una unidad de red compartida, lo que hacía difícil realizar un seguimiento de los cambios y actualizaciones. Este método a menudo llevaba a conflictos de versiones, ya que múltiples personas podían trabajar inadvertidamente en el mismo archivo simultáneamente, resultando en trabajo sobrescrito o la necesidad de fusionar contribuciones manualmente. Además, la falta de un seguimiento sistemático de cambios dificultaba identificar quién hizo cambios específicos y por qué, complicando el proceso de resolución de problemas y refinamiento de análisis.
+
+Sin el seguimiento sistemático proporcionado por el control de versiones, asegurar la reproducibilidad y transparencia en la investigación era más difícil. Los investigadores tenían que depender de una documentación manual detallada de sus procesos y cambios, la cual a menudo era incompleta o propensa a errores. Esta falta de un seguimiento integral obstaculizaba la capacidad de reproducir resultados con precisión, un aspecto fundamental de la investigación científica creíble. Además, la ausencia de un historial claro de modificaciones hacía difícil verificar la integridad de la investigación y validar los hallazgos durante la revisión por pares o el escrutinio externo.
+
+En general, los métodos utilizados antes del control de versiones eran laboriosos, propensos a errores y a menudo dificultaban una colaboración y transparencia eficientes. La introducción de sistemas de control de versiones revolucionó la manera en que los economistas e investigadores gestionan sus proyectos, ofreciendo un marco más robusto, eficiente y confiable para realizar y compartir su trabajo.
+
+En un proyecto relevante, y ante cambios/eventos importantes (e.g. presentación de los avances de la tesis ante el comité),  lo que hará el usuario promedio es hacer una copia completa del estado actual del proyecto y guaradarla con un nombre tipo: "FechaDeHoy_Proyecto". Todos hemos estado ahí! tratando de evitar lo peor. Mal que mal, la información no se pierde, solo se transforma. Pero si uno tiene que volver a revisar porqué las cosas no van según lo predicho, encontrar la causa se vuelve tormentoso cuando no se sabe exactamente dónde están las diferencias. Este problema se multiplica si se trabaja de forma colaborativa. Quién cambió qué? => "prefiero no borrar nada"
 
 <center>
 	<figcaption>Naive Version Control</figcaption>
-	<img src="src/images/projectBeforeGit.png"></img>
+	<img src="./src/images/projectBeforeGit.png"></img>
 </center>
 
-Este problema no es nuevo. A diferencia de nuestro sistema "naive" en la figura arriba, los desarrolladores de software --- que vienen pensando en este problema por décadas--- han encontrado soluciones tanto cómodas (facilidad para trazar cambios), como eficientes (rápidas y que ocupan poca memoria). Todos ellos (incluso nuestro ejemplo) se basan en el registro de fotografías tomadas en un momento determinado.
+### Como funciona el versionamiento?
 
-Para entender cómo funcionan los sistemas de control de version es bueno introducir un poco de la jerga[^whyEnglish]. Un **repository** (comúnmente denominados "repo") es un conjunto de archivos y su historial desde su creación, mientras que  **working copy** corresponde a una versión particular del repositorio. Las fotografías tomadas en un momento determinadas se conocen como **commits**.  Así, los repositorios nacen cuando el usuario hace el primer *commit* de su proyecto.
+A diferencia de nuestro sistema "naive" en la figura arriba, los desarrolladores de software ---que vienen pensando en este problema por décadas--- han encontrado soluciones tanto cómodas (facilidad para trazar cambios), como eficientes (rápidas y que ocupan poca memoria). Todos ellos se basan en el registro de fotografías tomadas en un momento determinado.
+
+Para entender cómo funcionan los sistemas de control de version es bueno introducir un poco de la jerga[^whyEnglish]. Un **repository** (los lolos les llaman "repo") es un conjunto de archivos y su historial desde su creación, mientras que  **working copy** corresponde a una versión particular del repositorio. Las fotografías tomadas en un momento determinadas se conocen como **commits**.  Así, los repositorios nacen cuando el usuario hace el primer *commit* de su proyecto.
 
 En la mayoría de los sitemas de control de version estos *commits* se hacen de forma manual. A diferencia de algunas aplicaciones que buscan respaldar el trabajo realizado en el corto plazo, el control de versión privilegia la voluntad del usuario para comprometer los cambios.[^currentWorkBackUp]
 
 Con las definiciones anteriores en mano, podemos subdividir los sistemas de control de versión por tres aspectos:
 
-1. *Locales*: mantienen la información de todos los cambios de manera local (i.e. en el computador del usuario). El problema de este tipo de sistemas es que no permiten la colaboración.
+*   *Locales*: mantienen la información de todos los cambios de manera local (i.e. en el computador del usuario). El problema de este tipo de sistemas es que no permiten la colaboración.
 
-2. *No distribuidos*: mantienen el repositorio en un servidor y le entregan una copia de trabajo a cada usario. Para que otros usuarios vean mi avance, yo tengo que hacer un *commit* y ellos tienen que hacer un **update** de la copia de trabajo que están usando. La principal ventaja de los sistemas no distribuidos es que permiten la colaboración y que el tráfico de datos es menor. No obstante, el riesgo de perderlo todo depende de qué tan seguro sea el servidor central.
+* *No distribuidos*: mantienen el repositorio en un servidor y le entregan una copia de trabajo a cada usario. Para que otros usuarios vean mi avance, yo tengo que hacer un *commit* y ellos tienen que hacer un **update** de la copia de trabajo que están usando. La principal ventaja de los sistemas no distribuidos es que permiten la colaboración y que el tráfico de datos es menor. No obstante, el riesgo de perderlo todo depende de qué tan seguro sea el servidor central.
 
-3. Distribuidos: le entrega el repositorio completo a cada usuario. Esto minimiza la posibilidad de una pérdida catastrófica. Además, agiliza la revision de versiones pasadas sin tener que estar conectados al servidor central. Para que mis colaboradores puedan ver los cambios que he hecho primero tengo que hacer el *commit* de los cambios y luego enviarlos al servidor --- acto conocido como **push** --- , luego ellos tienen que solicitar al servidor los cambios del repositorio  --- **pull**--- y pasar los cambios a su copia de trabajo.
+* *Distribuidos*: le entrega el repositorio completo a cada usuario. Esto minimiza la posibilidad de una pérdida catastrófica. Además, agiliza la revision de versiones pasadas sin tener que estar conectados al servidor central. Para que mis colaboradores puedan ver los cambios que he hecho primero tengo que hacer el *commit* de los cambios y luego enviarlos al servidor --- acto conocido como **push** --- , luego ellos tienen que solicitar al servidor los cambios del repositorio  --- **pull**--- y pasar los cambios a su copia de trabajo.
 
 <center>
-	<figcaption>Non-distributed version control system </figcaption>
-	<img src="src/images/nonDistributedDiagram.png" width=80% float= left></img>
-	<figcaption>Distributed version control system </figcaption>
-	<img src="src/images/distributedDiagram.png" width=80% float= left></img>
+    <figcaption>Non-distributed version control system </figcaption>
+    <img src="./src/svg/nonDistributedVCS.svg" width=80% float= left></img>
 </center>
 
+<center>
+    <figcaption>Distributed version control system </figcaption>
+    <img src="./src/svg/distributedVCS.svg" width=80% float= left></img>
+</center>
 
 En conclusión, un sistema de control de versión es un secretario que mantiene registros de toda la información relevante respecto de cambios hechos en un trabajo compuesto por uno o más archivos. El software elabora dichos registros cuando los usuarios están listos para "comprometer" los cambios. A pesar de que el los sitemas no distribuidos tienen menos pasos para que los cambios que hacemos puedan ser vistos por nuestros colaboradores, y que la copia de trabajo sea mas liviana en comparacion con los sitemas distribuidos, los beneficions de estos últimos --- seguridad, rapidez, comodidad--- dominan fuertemente en comparación con sus deficiencias. Esto hace que sistemas como Git y Mercurial (ambos distribuidos) sean los mas utilizados en en mundo.
 
-### Qué es Git y cómo funciona
+### Qué es Git? y qué es GitHub?
 
-Como se mencionó anteriormente, Git es un sistema distribuido de control de versión. Uno de los más utilizados en el mundo. Fue creado en 2005 por [Linus Torvards](https://en.wikipedia.org/wiki/Linus_Torvalds) para el desarrollo del sistema operativo Linux. Lo que esencialmente hace, es registrar los cambios de una versión a otra y presenta al usuario la suma de todos esos cambios: algo asi como la integral de la derivada.[^oversimplification] La principal ventaja de este sistema es que esta optimizado para ser rápido y eficiente en el uso de espacio, además de disminuir la probabilidad de una perdida catastrofica.
+<center>
+    <figcaption> GIT, banda de rock de los 80's</figcaption>
+	<img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Git_banda_argentina.jpg"></img>
+</center>
 
-Git es un software que se instala en el computador de los usuarios y pude ser utilizado de forma local (i.e. no es necesario un servidor ni acceso a internet). Una vez instalado, el usuario puede acceder a las utilidades del software a través de la linea de comando (Terminal en macOS o Command Prompt o PowerShell en Windows). Algunos sistemas operativos  o aplicaciones (como Python, Anaconda)  instalan Git por defecto, por lo que puede que ya tengas Git en tu sistema. Para verificar esto escribe[^cmdLineNotation]  `git --version` en el Terminal. Si está instalado deberías tener un mensage y no un error
+A diferencia de la banda de rock argentino G.I.T., **Git es un software de control de versiones distribuido que se ha popularizado exponencialmente en los últimos 20 años**. A pesar de su popularidad, existen muchos mitos y confusión sobre su uso y capacidades. Esto se debe principalmente a que su masificación se ha logrado mediante interfaces de usuario (UI) que lo hacen más accesible y amigable para los usuarios. Por ejemplo, hoy en día, muchos economistas conocen o han escuchado hablar de la plataforma GitHub, pero no necesariamente comprenden las diferencias entre esta y Git.
 
+Git fue creado en 2005 por [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds) para el desarrollo del sistema operativo Linux. Esencialmente, Git registra los cambios de una versión a otra y presenta al usuario la suma de todos esos cambios, algo así como la integral de una derivada. La principal ventaja de este sistema es que está optimizado para ser rápido y eficiente en el uso de espacio, además de disminuir la probabilidad de una pérdida catastrófica de código.
 
-``` git
+Git es un software que se instala en el computador de los usuarios y puede ser utilizado de forma local, sin necesidad de un servidor o acceso a internet. Una vez instalado, el usuario puede acceder a las utilidades del software a través de la línea de comando (Terminal en macOS o Command Prompt o PowerShell en Windows). Algunos sistemas operativos o aplicaciones (como Python, Anaconda) instalan Git por defecto, por lo que es posible que ya tengas Git en tu sistema. Para verificar esto, escribe `git --version` en el Terminal. Si está instalado, deberías ver un mensaje similar a este:
+
+```shell
 $ git --version
 git version 2.24.3 (Apple Git-128)
 ```
+
+GitHub, por otro lado, es una plataforma de desarrollo que permite a los programadores crear, almacenar, gestionar y compartir su código. Utiliza Git como base, pero añade una serie de características adicionales como control de acceso, seguimiento de errores, solicitudes de características de software, gestión de tareas, integración continua y wikis para cada proyecto. La principal diferencia entre Git y GitHub radica en que Git es una herramienta de línea de comandos para el control de versiones, mientras que GitHub es una plataforma en línea que facilita la colaboración y la gestión de proyectos a través de una interfaz gráfica fácil de usar.
+
+El desarrollo de GitHub comenzó el 19 de octubre de 2007 y fue lanzado oficialmente en abril de 2008 por Tom Preston-Werner, Chris Wanstrath, P. J. Hyett y Scott Chacon, después de estar disponible durante unos meses como versión beta. El nombre "GitHub" es un compuesto de "Git" y "hub", reflejando su propósito de ser un centro de colaboración para proyectos gestionados con Git. En junio de 2018, Microsoft anunció la adquisición de GitHub por 7.5 mil millones de dólares en acciones, y la adquisición se finalizó en octubre de 2018. Desde entonces, GitHub ha continuado operando como una plataforma independiente, pero con el respaldo y los recursos adicionales de Microsoft, lo que ha permitido una mayor integración con otras herramientas y servicios de Microsoft, como Visual Studio Code y Azure.
+
+## TODO
+
+
+
 Parte del set up inicial incluye el definir un nombre de usuario y correo electrónico, datos que servirán para identificar la autoría de los cambios. Podemos definir estos parámetros globalmente (para el usuario de la sesión) escribiendo
 
 ``` git
