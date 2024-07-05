@@ -107,6 +107,30 @@ $ git config --global user.name "Tu Nombre o NickName"
 ```
 Es [este link](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config) se pueden encontrar mas opciones para configurar Git.
 
+### Git init and clone
+
+Para iniciar un repositotrio
+
+```bash
+~/your/path $ git init
+Initialized empty Git repository in /your/path/.git/
+```
+Lo que este comando hace es crear una carpeta oculta `.git` en donde Git esconderá todo lo necesario para hacer su magia. Es esta carpoeta vive toda la historia del repositorio y como se relaciona con el resto del mundo. Si queremos pasar de tener un repositorio Git a no tener uno, simplemente debemos eliminar la carpeta `.git`
+
+[mas informacion sobre `git init`](https://git-scm.com/docs/git-init)
+
+Cuando queremos usar un proyecto que ya existe, debemos clonarlo desde donde vive remotamente. Para ello utilizamos
+
+```bash
+~/your/path $ git clone "url/to/remote/repo.git"
+> Cloning into `remote`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+[mas informacion sobre `git clone`](https://git-scm.com/docs/git-clone)
+
 ### Git add y Git commit
 
 ### Ramas
