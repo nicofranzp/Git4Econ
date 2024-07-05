@@ -4,7 +4,7 @@ La idea de este repositorio es documentar los beneficios del uso de *Git* y *Git
 
 Es importante entender que los sistemas de control de versión no sustituyen la buena organización personal y grupal. Las malas prácticas que mantenemos en nuestra vida digital tienden a replicarse usando Git, y sus consecuencias pueden empeorar si los usuarios no son consientes de ellas. No existe una estrategia única para evitar esto: claramente depende del tipo de proyecto en el que se trabaje (e.g. no es lo mismo trabajar de a 2 personas que de a 50). En este documento trataremos de mencionar lo que por experiencia consideramos "mejores prácticas" y prácticas que creemos se deben evitar.
 
-Revisa la presentación [AQUI](https://nicofranzp.gihub.io/git4econ/)
+Revisa la presentación [AQUI](https://nicofranzp.github.io/Git4Econ/) 
 
 ## Introducción
 
