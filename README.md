@@ -4,7 +4,7 @@ La idea de este repositorio es documentar los beneficios del uso de *Git* y *Git
 
 Es importante entender que los sistemas de control de versión no sustituyen la buena organización personal y grupal. Las malas prácticas que mantenemos en nuestra vida digital tienden a replicarse usando Git, y sus consecuencias pueden empeorar si los usuarios no son consientes de ellas. No existe una estrategia única para evitar esto: claramente depende del tipo de proyecto en el que se trabaje (e.g. no es lo mismo trabajar de a 2 personas que de a 50). En este documento trataremos de mencionar lo que por experiencia consideramos "mejores prácticas" y prácticas que creemos se deben evitar.
 
-Revisa la presentación [AQUI](https://nicofranzp.github.io/Git4Econ/) 
+Revisa la presentación [AQUI](https://nicofranzp.github.io/Git4Econ/)
 
 ## Introducción
 
@@ -28,17 +28,13 @@ Entender el mundo depende cada vez más de conjuntos de datos complejos, softwar
 
 ### La vida de antes de Git
 
-Antes de la aparición de los sistemas de control de versiones, los economistas y los investigadores dependían de métodos más manuales y menos eficientes para gestionar sus proyectos y colaborar con otros. Estos métodos tradicionales presentaban varios desafíos y a menudo llevaban a confusión, ineficacias y errores.
+Antes de la aparición de los sistemas de control de versiones, los investigadores dependían de métodos manuales y menos eficientes para gestionar sus proyectos y colaborar con otros. Estos métodos tradicionales presentan varios desafíos y a menudo llevan a confusión, ineficacias y errores.
 
-En ausencia de sistemas de control de versiones, los economistas gestionaban sus archivos manualmente. Esto generalmente implicaba crear múltiples copias de documentos y conjuntos de datos, a menudo con diferentes convenciones de nombres para indicar varias versiones (por ejemplo, "análisis_v1.docx," "análisis_final.docx," "análisis_final_final.docx"). Este enfoque no solo llenaba el espacio de trabajo, sino que también dificultaba el seguimiento de los cambios e identificar la última versión de un documento. Como resultado, los investigadores a menudo pasaban mucho tiempo buscando el archivo correcto o fusionando cambios de diferentes versiones, aumentando la probabilidad de errores e inconsistencias.
-
-La colaboración antes del control de versiones se realizaba principalmente a través de correos electrónicos y unidades compartidas. Los investigadores enviaban archivos de un lado a otro por correo electrónico o los subían a una unidad de red compartida, lo que hacía difícil realizar un seguimiento de los cambios y actualizaciones. Este método a menudo llevaba a conflictos de versiones, ya que múltiples personas podían trabajar inadvertidamente en el mismo archivo simultáneamente, resultando en trabajo sobrescrito o la necesidad de fusionar contribuciones manualmente. Además, la falta de un seguimiento sistemático de cambios dificultaba identificar quién hizo cambios específicos y por qué, complicando el proceso de resolución de problemas y refinamiento de análisis.
-
-Sin el seguimiento sistemático proporcionado por el control de versiones, asegurar la reproducibilidad y transparencia en la investigación era más difícil. Los investigadores tenían que depender de una documentación manual detallada de sus procesos y cambios, la cual a menudo era incompleta o propensa a errores. Esta falta de un seguimiento integral obstaculizaba la capacidad de reproducir resultados con precisión, un aspecto fundamental de la investigación científica creíble. Además, la ausencia de un historial claro de modificaciones hacía difícil verificar la integridad de la investigación y validar los hallazgos durante la revisión por pares o el escrutinio externo.
-
-En general, los métodos utilizados antes del control de versiones eran laboriosos, propensos a errores y a menudo dificultaban una colaboración y transparencia eficientes. La introducción de sistemas de control de versiones revolucionó la manera en que los economistas e investigadores gestionan sus proyectos, ofreciendo un marco más robusto, eficiente y confiable para realizar y compartir su trabajo.
-
-En un proyecto relevante, y ante cambios/eventos importantes (e.g. presentación de los avances de la tesis ante el comité),  lo que hará el usuario promedio es hacer una copia completa del estado actual del proyecto y guaradarla con un nombre tipo: "FechaDeHoy_Proyecto". Todos hemos estado ahí! tratando de evitar lo peor. Mal que mal, la información no se pierde, solo se transforma. Pero si uno tiene que volver a revisar porqué las cosas no van según lo predicho, encontrar la causa se vuelve tormentoso cuando no se sabe exactamente dónde están las diferencias. Este problema se multiplica si se trabaja de forma colaborativa. Quién cambió qué? => "prefiero no borrar nada"
+ * Corros electronicos
+ * Dropbox, onedrive y GoogleDrive
+ * Usabilidad del versionamiento a-la Office
+ * Comentarios en los códigos
+ * versionamiento manual (carpeta Old)
 
 <center>
 	<figcaption>Naive Version Control</figcaption>
@@ -136,6 +132,13 @@ Cuando queremos usar un proyecto que ya existe, debemos clonarlo desde donde viv
 ### Ramas
 
 ### El archivo `.gitignore`
+
+## Como empezar a trabajar con GitHub
+
+### Remotes
+### Remotes
+### Issues
+
 
 ## Buenas y malas practicas
 
